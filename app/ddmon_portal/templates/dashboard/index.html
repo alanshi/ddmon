@@ -1,0 +1,33 @@
+{% extends '../base.html' %}
+
+
+{% block content %}
+
+<div class="row">
+    <!-- column -->
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">信息监控 </h4>
+                <h6 class="card-subtitle"> <code>{{info.ip}}</code></h6>
+                <h5 class="m-t-30">Cpu<span class="pull-right">{{ info.cpu }}%</span></h5>
+                <div class="progress ">
+                    <div class="progress-bar bg-danger " style="width: {{ info.cpu }}%; height:6px;" role="progressbar"> <span class="sr-only">60% Complete</span> </div>
+                </div>
+                <h5 class="m-t-30">Memory<span class="pull-right">{{ info.memory }}%</span></h5>
+                <div class="progress">
+                    <div class="progress-bar bg-info " style="width: {{ info.memory }}%; height:6px;" role="progressbar"> <span class="sr-only">60% Complete</span> </div>
+                </div>
+                <h5 class="m-t-30">Disk<span class="pull-right">{{ info.disk }}%</span></h5>
+                <div class="progress">
+                    <div class="progress-bar bg-success " style="width: {{ info.disk }}%; height:6px;" role="progressbar"> <span class="sr-only">60% Complete</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- column -->
+</div>
+
+
+{% endblock %}
